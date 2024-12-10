@@ -43,7 +43,8 @@ ol {
 .content {
   display: flex;
   align-items: flex-end;
-  margin: 133px 30px;
+  padding: 0px 30px;
+  width: 100%;
   gap: 30px;
 }
 
@@ -54,14 +55,14 @@ ol {
 
 .content__list {
   position: relative;
-  max-height: 298px;
-  overflow-y: scroll;
+  height: 298px;
+  overflow: auto
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
 }
 
 .result__video-container {
@@ -90,20 +91,24 @@ ol {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 2px 2px;
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
   width: 194px;
   height: 103px;
+  flex-shrink: 0;
 }
 
 .content__video-card-description-container {
   color: white;
-  padding: 2px 0 4px 2px;
+  padding-bottom: 2px;
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -113,12 +118,11 @@ ol {
 }
 
 .title {
-  align-self: flex-start;
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
-  max-height: 210px;
+  padding-top: 20px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -136,7 +140,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -145,17 +149,23 @@ ol {
   text-decoration-skip-ink: none;
   text-transform: uppercase;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
 
+.content__video-card-description-container {
+  width: 200px;
 }
 
 .visually-hidden {
@@ -185,15 +195,14 @@ fieldset {
   background-color: transparent;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #FFFFFFB2;
-
+  color: inherit;
 }
 
 .search-form__checkbox-list {
@@ -206,12 +215,8 @@ fieldset {
   justify-content: center;
   align-items: center;
   gap: 5px;
-}
-
-.search-form__label {
   width: fit-content;
   cursor: pointer;
-
 }
 
 .search-form__pseudo-checkbox {
@@ -230,13 +235,14 @@ fieldset {
   border: 1px solid white;
   color: white;
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  cursor: pointer;
 }
 
 .search-form__submit-button {
@@ -249,18 +255,17 @@ fieldset {
   margin-bottom: 2px;
 }
 
-:active, :hover, :focus {
+.search-form__textfield:active {
   outline: 0;
   outline-offset: 0;
-}
-
-.search-form__textfield:active {
   border-right: 1px solid white;
   border-left: 1px solid white;
 }
 
 .search-form__textfield:hover {
   cursor: text; 
+  outline: 0;
+  outline-offset: 0;
 }
 
 .search-form__label:not(:active):has(:focus-visible) {
@@ -285,7 +290,7 @@ fieldset {
   text-decoration: none;
 }
 
-button:hover {
+.button:hover {
   text-decoration: underline solid white;
   text-underline-offset: 2px;
 }
@@ -295,17 +300,17 @@ button:hover {
   outline-offset: 1px;
 }
 
-.more-button:focus-visible {
-  outline: 1px solid #FFF;
-  outline-offset: 1px;
+.content__card-link_current {
+  background-color: #545050;
 }
 
-.content__card-link_current {
+.content__card-link:active {
   background-color: #545050;
 }
 
 .content__card-link:hover {
   text-decoration: underline solid white;
+  text-underline-offset: 3px;
 }
 
 .content__card-link:focus-visible {
