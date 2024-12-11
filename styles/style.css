@@ -135,8 +135,8 @@ ol {
 
 .content__card-link {
   display: block;
-  text-decoration: none;
   margin: 2px;
+  text-decoration: none;
 }
 
 .content__video-card-title {
@@ -145,7 +145,6 @@ ol {
   font-weight: 700;
   line-height: 30px;
   text-align: left;
-  text-underline-position: from-font;
   text-decoration-skip-ink: none;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -243,6 +242,7 @@ fieldset {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .search-form__submit-button {
@@ -285,14 +285,14 @@ fieldset {
   text-decoration: underline solid white;
 }
 
-.button:active {
-  background-color: #545050;
-  text-decoration: none;
-}
-
 .button:hover {
   text-decoration: underline solid white;
   text-underline-offset: 2px;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
 }
 
 .button:focus-visible {
@@ -304,16 +304,17 @@ fieldset {
   background-color: #545050;
 }
 
-.content__card-link:active {
-  background-color: #545050;
-}
-
 .content__card-link:hover {
   text-decoration: underline solid white;
-  text-underline-offset: 3px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+  text-decoration: none;
 }
 
 .content__card-link:focus-visible {
   outline: 1px solid #FFF;
   outline-offset:1px;
+  text-decoration: none;
 }
