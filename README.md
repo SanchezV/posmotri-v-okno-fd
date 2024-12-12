@@ -1,1 +1,1 @@
-https://github.com/SanchezV/posmotri_v_okno
+https://github.com/SanchezV/posmotri-v-okno-fd
